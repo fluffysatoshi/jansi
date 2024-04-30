@@ -24,6 +24,7 @@ JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM *vm, void *reserved) {
 
 JNIEXPORT void JNICALL CLibrary_NATIVE(init)(JNIEnv *env, jclass that)
 {
+  printf("Hello from 🐦 Fluffy Satoshi\n");
 #if defined(HAVE_ISATTY)
 	(*env)->SetStaticBooleanField(env, that, (*env)->GetStaticFieldID(env, that, "HAVE_ISATTY", "Z"), (jboolean)1);
 #endif
